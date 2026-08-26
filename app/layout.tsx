@@ -5,8 +5,11 @@ import Footer from "@/components/layout/Footer";
 import AnonymousAuthInit from "@/components/auth/AnonymousAuthInit";
 
 export const metadata: Metadata = {
-  title: "Safety Voice Board | 익명 안전관리 의견 게시판",
-  description: "사내 안전관리 위험요소, 개선 제안, 아차사고 및 MSDS/SDS 화학물질 정보를 공유하고 확인하는 익명 웹 서비스",
+  title: "ONCOBIX Safety Voice | 온코빅스 사내 안전 익명 제보",
+  description: "온코빅스 사내 안전관리 위험요소, 개선 제안, 아차사고 및 MSDS/SDS 화학물질 정보를 공유하고 확인하는 익명 웹 서비스",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -25,13 +25,13 @@ export default function Header() {
     <header className="sticky top-0 z-40 w-full border-b border-slate-200 bg-white/95 backdrop-blur shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 font-bold text-slate-900 transition hover:opacity-90">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-600 text-white shadow-sm">
-            <ShieldCheck className="h-5 w-5" />
-          </div>
-          <div>
-            <span className="text-lg font-extrabold tracking-tight text-slate-900">Safety Voice</span>
-            <span className="ml-1.5 hidden text-xs font-semibold text-blue-600 sm:inline-block">안전 익명 제보</span>
+        <Link href="/" className="flex items-center gap-3 font-bold text-slate-900 transition hover:opacity-90">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.png" alt="ONCOBIX Logo" className="h-7 w-auto object-contain" />
+          <div className="h-4 w-px bg-slate-300 hidden sm:block" />
+          <div className="flex items-center gap-1.5">
+            <span className="text-base sm:text-lg font-extrabold tracking-tight text-slate-900">Safety Voice</span>
+            <span className="hidden text-xs font-semibold text-blue-600 sm:inline-block">안전 익명 제보</span>
           </div>
         </Link>
 

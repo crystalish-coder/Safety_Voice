@@ -22,12 +22,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           {/* Service Info */}
           <div>
-            <div className="flex items-center gap-2 text-white font-bold text-base mb-2">
-              <Shield className="h-5 w-5 text-blue-400" />
-              <span>Safety Voice Board</span>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="rounded-lg bg-white px-2.5 py-1 inline-flex items-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/logo.png" alt="ONCOBIX Logo" className="h-5 w-auto object-contain" />
+              </div>
+              <span className="text-white font-bold text-sm">Safety Voice</span>
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
-              더 안전하고 건강한 연구 및 작업 환경을 만들기 위해 구성원 누구나 익명으로 위험 요소와 개선 제안을 공유하는 소통 창구입니다.
+              온코빅스 임직원 및 연구원의 안전하고 쾌적한 작업 환경을 위해 위험 요소와 개선 제안을 익명으로 수렴하는 공식 소통 창구입니다.
             </p>
           </div>
 
@@ -54,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-slate-800 pt-6 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} Safety Voice Board. All rights reserved.
+          © {new Date().getFullYear()} ONCOBIX Inc. All rights reserved.
         </div>
       </div>
     </footer>
