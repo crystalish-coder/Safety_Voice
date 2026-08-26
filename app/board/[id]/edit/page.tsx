@@ -18,6 +18,7 @@ import {
 } from "@/types";
 import { postUpdateSchema } from "@/lib/validation/schemas";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { getOrCreateAnonymousUserId } from "@/lib/supabase/anonUser";
 
 export default function EditPostPage() {
   const params = useParams();
@@ -46,7 +47,7 @@ export default function EditPostPage() {
       }
 
       try {
-        const { data: { session } } = await supabase.auth.getSession();
+        const currentUserId = await getOrCreateAnonymousUserId();
         const { data, error } = await supabase
           .from("posts")
           .select("*")
@@ -58,7 +59,7 @@ export default function EditPostPage() {
         }
 
         // 작성자 본인 확인
-        if (session?.user?.id && data.author_id !== session.user.id) {
+        if (currentUserId && data.author_id !== currentUserId) {
           alert("본인이 작성한 글만 수정할 수 있습니다.");
           router.push(`/board/${postId}`);
           return;

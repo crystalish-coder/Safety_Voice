@@ -25,6 +25,7 @@ import {
   PostStatus,
 } from "@/types";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { getOrCreateAnonymousUserId } from "@/lib/supabase/anonUser";
 import { formatDateTime } from "@/lib/utils";
 
 // Mock Fallback
@@ -68,11 +69,8 @@ export default function PostDetailPage() {
       }
 
       try {
-        // 세션 유저 ID 확인 (작성자 본인 판별용)
-        const { data: { session } } = await supabase.auth.getSession();
-        if (session?.user) {
-          setCurrentUserId(session.user.id);
-        }
+        const uid = await getOrCreateAnonymousUserId();
+        setCurrentUserId(uid);
 
         const { data, error } = await supabase
           .from("posts")

@@ -20,6 +20,7 @@ import {
 } from "@/types";
 import { postCreateSchema } from "@/lib/validation/schemas";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
+import { getOrCreateAnonymousUserId } from "@/lib/supabase/anonUser";
 
 export default function NewPostPage() {
   const router = useRouter();
@@ -71,21 +72,12 @@ export default function NewPostPage() {
         return;
       }
 
-      // 익명 세션 확인
-      let { data: { session } } = await supabase.auth.getSession();
-      if (!session) {
-        const authRes = await supabase.auth.signInAnonymously();
-        session = authRes.data.session;
-      }
-
-      if (!session?.user) {
-        throw new Error("익명 세션을 생성할 수 없습니다.");
-      }
+      const authorId = await getOrCreateAnonymousUserId();
 
       const { data, error } = await supabase
         .from("posts")
         .insert({
-          author_id: session.user.id,
+          author_id: authorId,
           category,
           title: title.trim(),
           content: content.trim(),
