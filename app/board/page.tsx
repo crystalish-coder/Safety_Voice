@@ -105,17 +105,17 @@ export default function BoardPage() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-slate-200 pb-5">
         <div>
           <h1 className="text-2xl font-extrabold text-slate-900 flex items-center gap-2">
-            <ShieldCheck className="h-6 w-6 text-blue-600" />
+            <ShieldCheck className="h-6 w-6 text-oncobix-500" />
             <span>안전 의견 익명 게시판</span>
           </h1>
           <p className="mt-1 text-xs sm:text-sm text-slate-500">
-            사내 안전 위험요소 및 개선 제안을 익명으로 확인하고 처리 상황을 추적할 수 있습니다.
+            온코빅스 사내 안전 위험요소 및 개선 제안을 익명으로 확인하고 처리 상황을 추적할 수 있습니다.
           </p>
         </div>
 
         <Link
           href="/board/new"
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-blue-700 active:scale-[0.98] transition"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-oncobix-500 px-4 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-oncobix-600 active:scale-[0.98] transition"
         >
           <PlusCircle className="h-4 w-4" />
           <span>새 안전 의견 작성</span>
@@ -132,7 +132,7 @@ export default function BoardPage() {
             placeholder="제목, 내용 또는 발생 위치 검색..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-10 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:bg-white focus:outline-none"
+            className="w-full rounded-xl border border-slate-200 bg-slate-50/50 pl-10 pr-4 py-2 text-sm text-slate-900 placeholder:text-slate-400 focus:border-oncobix-500 focus:bg-white focus:outline-none"
           />
         </div>
 
@@ -218,7 +218,7 @@ export default function BoardPage() {
               <Link
                 key={post.id}
                 href={`/board/${post.id}`}
-                className="group block rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm transition hover:border-blue-400 hover:shadow-md"
+                className="group block rounded-2xl border border-slate-200 bg-white p-4 sm:p-5 shadow-sm transition hover:border-oncobix-300 hover:shadow-md"
               >
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   {/* Main Content */}
@@ -238,7 +238,7 @@ export default function BoardPage() {
                       </span>
                     </div>
 
-                    <h2 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition">
+                    <h2 className="text-base font-bold text-slate-900 group-hover:text-oncobix-600 transition">
                       {post.title}
                     </h2>
 
@@ -259,7 +259,7 @@ export default function BoardPage() {
                     <span className={`rounded-full border px-3 py-1 text-xs font-bold ${statusInfo.badgeBg} ${statusInfo.color}`}>
                       {statusInfo.label}
                     </span>
-                    <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition" />
+                    <ChevronRight className="h-4 w-4 text-slate-400 group-hover:text-oncobix-600 group-hover:translate-x-0.5 transition" />
                   </div>
                 </div>
               </Link>

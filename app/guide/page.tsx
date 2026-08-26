@@ -5,13 +5,13 @@ export default function GuidePage() {
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8 space-y-10">
       <div className="text-center space-y-3">
-        <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-3.5 py-1 text-xs font-semibold text-blue-700">
+        <div className="inline-flex items-center gap-2 rounded-full border border-oncobix-200 bg-oncobix-50 px-3.5 py-1 text-xs font-semibold text-oncobix-700">
           <Shield className="h-3.5 w-3.5" />
           <span>안전 관리 소통 가이드</span>
         </div>
         <h1 className="text-3xl font-extrabold text-slate-900">Safety Voice 이용안내</h1>
         <p className="text-sm text-slate-600">
-          더 안전한 일터 조성을 위한 익명 제보 절차와 개인정보 보호 방침을 안내해 드립니다.
+          온코빅스 임직원 및 연구원의 안전한 일터 조성을 위한 익명 제보 절차와 개인정보 보호 방침을 안내해 드립니다.
         </p>
       </div>
 
@@ -26,7 +26,7 @@ export default function GuidePage() {
             { step: "04", title: "결과 답변 공유", desc: "조치 완료 후 상세 피드백과 향후 예방책을 게시물에 공개 답변합니다." },
           ].map((item) => (
             <div key={item.step} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-              <span className="text-xs font-black text-blue-600">{item.step}</span>
+              <span className="text-xs font-black text-oncobix-500">{item.step}</span>
               <h3 className="mt-2 text-sm font-bold text-slate-900">{item.title}</h3>
               <p className="mt-1 text-xs text-slate-500 leading-relaxed">{item.desc}</p>
             </div>
@@ -43,7 +43,7 @@ export default function GuidePage() {
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 text-xs sm:text-sm text-slate-600">
           <div className="flex items-start gap-3 rounded-xl bg-slate-50 p-4">
-            <EyeOff className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+            <EyeOff className="h-5 w-5 text-oncobix-500 shrink-0 mt-0.5" />
             <div>
               <strong className="font-bold text-slate-900 block mb-1">식별 정보 미수집</strong>
               <span>IP 주소, 로그인 계정, 사번, 기기 고유 식별자 등을 수집하거나 로그에 남기지 않습니다.</span>

@@ -159,7 +159,7 @@ export default function NewPostPage() {
                   onClick={() => setCategory(key as PostCategory)}
                   className={`rounded-xl border py-2.5 px-3 text-xs font-semibold transition ${
                     category === key
-                      ? "border-blue-600 bg-blue-50 text-blue-700 shadow-sm"
+                      ? "border-oncobix-500 bg-oncobix-50 text-oncobix-700 shadow-sm"
                       : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
                   }`}
                 >
@@ -210,7 +210,7 @@ export default function NewPostPage() {
               value={location}
               onChange={(e) => setLocation(e.target.value)}
               maxLength={100}
-              className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none"
+              className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-oncobix-500 focus:outline-none"
             />
             {errors.location && <p className="text-xs text-red-600 font-medium">{errors.location}</p>}
           </div>
@@ -229,7 +229,7 @@ export default function NewPostPage() {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               maxLength={100}
-              className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none"
+              className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-oncobix-500 focus:outline-none"
             />
             {errors.title && <p className="text-xs text-red-600 font-medium">{errors.title}</p>}
           </div>
@@ -248,7 +248,7 @@ export default function NewPostPage() {
               value={content}
               onChange={(e) => setContent(e.target.value)}
               maxLength={5000}
-              className="w-full rounded-xl border border-slate-200 p-4 text-sm text-slate-900 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none leading-relaxed"
+              className="w-full rounded-xl border border-slate-200 p-4 text-sm text-slate-900 placeholder:text-slate-400 focus:border-oncobix-500 focus:outline-none leading-relaxed"
             />
             {errors.content && <p className="text-xs text-red-600 font-medium">{errors.content}</p>}
           </div>
@@ -256,7 +256,7 @@ export default function NewPostPage() {
           {/* Privacy Guidance */}
           <div className="rounded-xl bg-slate-50 border border-slate-200 p-4 text-xs text-slate-600 space-y-1.5">
             <div className="flex items-center gap-1.5 font-bold text-slate-800">
-              <Info className="h-4 w-4 text-blue-600" />
+              <Info className="h-4 w-4 text-oncobix-500" />
               <span>개인정보 보호 안내</span>
             </div>
             <p>
@@ -276,7 +276,7 @@ export default function NewPostPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-blue-700 disabled:opacity-50 transition active:scale-[0.98]"
+              className="inline-flex items-center gap-2 rounded-xl bg-oncobix-500 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-oncobix-600 disabled:opacity-50 transition active:scale-[0.98]"
             >
               <Send className="h-4 w-4" />
               <span>{isSubmitting ? "접수 중..." : "익명 의견 접수하기"}</span>

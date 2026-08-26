@@ -201,11 +201,11 @@ export default function MsdsSearchPage() {
       {/* Top Header */}
       <div className="border-b border-slate-200 pb-5 space-y-2">
         <h1 className="text-2xl font-extrabold text-slate-900 flex items-center gap-2">
-          <FileSearch className="h-6 w-6 text-blue-600" />
+          <FileSearch className="h-6 w-6 text-oncobix-500" />
           <span>MSDS / SDS 화학물질 통합 라이브러리</span>
         </h1>
         <p className="text-xs sm:text-sm text-slate-500">
-          사내 등록 제조사 공인 SDS 문서 및 PubChem GHS 화학안전 정보를 한 곳에서 조회합니다.
+          온코빅스 사내 등록 제조사 공인 SDS 문서 및 PubChem GHS 화학안전 정보를 한 곳에서 조회합니다.
         </p>
       </div>
 
@@ -225,14 +225,14 @@ export default function MsdsSearchPage() {
               placeholder="CAS 번호 (예: 67-64-1, 67-56-1) 또는 화학물질명 검색..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="w-full rounded-xl border border-slate-200 pl-10 pr-4 py-3 text-sm text-slate-900 focus:border-blue-500 focus:outline-none"
+              className="w-full rounded-xl border border-slate-200 pl-10 pr-4 py-3 text-sm text-slate-900 focus:border-oncobix-500 focus:outline-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={pubchemLoading}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-blue-700 disabled:opacity-50 transition"
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-oncobix-500 px-6 py-3 text-sm font-bold text-white shadow-sm hover:bg-oncobix-600 disabled:opacity-50 transition"
           >
             {pubchemLoading ? <RefreshCw className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}
             <span>통합 검색</span>
@@ -265,11 +265,11 @@ export default function MsdsSearchPage() {
 
       {/* Priority 1: 사내 등록 공식 제조사 SDS (안전관리 최우선) */}
       <section className="space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="h-5 w-5 text-blue-600" />
+            <ShieldCheck className="h-5 w-5 text-oncobix-500" />
             <h2 className="text-lg font-bold text-slate-900">1. 사내 등록 제조사 공식 SDS</h2>
-            <span className="rounded-full bg-blue-50 border border-blue-200 px-2.5 py-0.5 text-[11px] font-bold text-blue-700">
+            <span className="rounded-full bg-oncobix-50 border border-oncobix-200 px-2.5 py-0.5 text-[11px] font-bold text-oncobix-700">
               우선 적용 문서
             </span>
           </div>
@@ -284,7 +284,7 @@ export default function MsdsSearchPage() {
             {filteredSds.map((sds) => (
               <div
                 key={sds.id}
-                className="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm space-y-3 hover:border-blue-300 transition"
+                className="rounded-2xl border border-oncobix-100 bg-white p-5 shadow-sm space-y-3 hover:border-oncobix-300 transition"
               >
                 <div className="flex items-start justify-between gap-2">
                   <h3 className="font-bold text-slate-900 text-base line-clamp-1">{sds.chemical_name}</h3>
@@ -313,7 +313,7 @@ export default function MsdsSearchPage() {
                   {sds.file_path ? (
                     <button
                       onClick={() => alert("사내 Storage PDF 열람 모달을 호출합니다.")}
-                      className="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 px-3.5 py-2 text-xs font-bold text-white hover:bg-blue-700 transition"
+                      className="inline-flex items-center gap-1.5 rounded-xl bg-oncobix-500 px-3.5 py-2 text-xs font-bold text-white hover:bg-oncobix-600 transition"
                     >
                       <FileText className="h-3.5 w-3.5" />
                       <span>공식 SDS PDF 보기</span>
@@ -323,7 +323,7 @@ export default function MsdsSearchPage() {
                       href={sds.external_url}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2 text-xs font-bold text-blue-700 hover:bg-slate-100 transition"
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2 text-xs font-bold text-oncobix-700 hover:bg-slate-100 transition"
                     >
                       <ExternalLink className="h-3.5 w-3.5" />
                       <span>제조사 SDS 링크</span>

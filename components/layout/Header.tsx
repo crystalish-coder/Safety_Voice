@@ -31,7 +31,7 @@ export default function Header() {
           <div className="h-4 w-px bg-slate-300 hidden sm:block" />
           <div className="flex items-center gap-1.5">
             <span className="text-base sm:text-lg font-extrabold tracking-tight text-slate-900">Safety Voice</span>
-            <span className="hidden text-xs font-semibold text-blue-600 sm:inline-block">안전 익명 제보</span>
+            <span className="hidden text-xs font-semibold text-oncobix-500 sm:inline-block">안전 익명 제보</span>
           </div>
         </Link>
 
@@ -45,7 +45,7 @@ export default function Header() {
                 href={link.href}
                 className={`rounded-md px-3.5 py-2 text-sm font-medium transition-colors ${
                   active
-                    ? "bg-blue-50 text-blue-700 font-semibold"
+                    ? "bg-oncobix-50 text-oncobix-600 font-semibold"
                     : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
                 }`}
               >
@@ -64,7 +64,7 @@ export default function Header() {
 
           <Link
             href="/board/new"
-            className="flex items-center gap-1.5 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 active:scale-[0.98]"
+            className="flex items-center gap-1.5 rounded-lg bg-oncobix-500 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-oncobix-600 active:scale-[0.98]"
           >
             <AlertTriangle className="h-4 w-4" />
             <span>의견 작성</span>
@@ -75,7 +75,7 @@ export default function Header() {
         <div className="flex md:hidden items-center gap-2">
           <Link
             href="/board/new"
-            className="rounded-md bg-blue-600 p-2 text-white shadow-sm hover:bg-blue-700"
+            className="rounded-md bg-oncobix-500 p-2 text-white shadow-sm hover:bg-oncobix-600"
             title="의견 작성"
           >
             <AlertTriangle className="h-4 w-4" />
@@ -106,7 +106,7 @@ export default function Header() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block rounded-md px-3 py-2 text-base font-medium ${
                   isActive(link.href)
-                    ? "bg-blue-50 text-blue-700 font-semibold"
+                    ? "bg-oncobix-50 text-oncobix-600 font-semibold"
                     : "text-slate-700 hover:bg-slate-50"
                 }`}
               >

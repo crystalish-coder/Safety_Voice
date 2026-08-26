@@ -245,10 +245,10 @@ export default function AdminPage() {
       <div className="mx-auto max-w-md px-4 py-16 sm:px-6">
         <div className="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm space-y-6">
           <div className="text-center space-y-2">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-700">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-oncobix-100 text-oncobix-700">
               <Lock className="h-6 w-6" />
             </div>
-            <h1 className="text-2xl font-extrabold text-slate-900">안전관리자 로그인</h1>
+            <h1 className="text-2xl font-extrabold text-slate-900">온코빅스 안전관리자 로그인</h1>
             <p className="text-xs text-slate-500">
               안전관리 담당자 전용 관리 포털입니다.
             </p>
@@ -269,7 +269,7 @@ export default function AdminPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:border-oncobix-500 focus:outline-none"
               />
             </div>
 
@@ -281,14 +281,14 @@ export default function AdminPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none"
+                className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:border-oncobix-500 focus:outline-none"
               />
             </div>
 
             <button
               type="submit"
               disabled={isLoggingIn}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 py-3 text-sm font-bold text-white shadow-sm hover:bg-blue-700 disabled:opacity-50 transition"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-oncobix-500 py-3 text-sm font-bold text-white shadow-sm hover:bg-oncobix-600 disabled:opacity-50 transition"
             >
               <LogIn className="h-4 w-4" />
               <span>{isLoggingIn ? "로그인 중..." : "관리자 로그인"}</span>
@@ -311,8 +311,8 @@ export default function AdminPage() {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between border-b border-slate-200 pb-5">
         <div>
           <div className="flex items-center gap-2">
-            <span className="rounded-md bg-blue-600 px-2 py-0.5 text-xs font-bold text-white">ADMIN</span>
-            <h1 className="text-2xl font-extrabold text-slate-900">안전관리 포털 대시보드</h1>
+            <span className="rounded-md bg-oncobix-500 px-2 py-0.5 text-xs font-bold text-white">ADMIN</span>
+            <h1 className="text-2xl font-extrabold text-slate-900">온코빅스 안전관리 포털</h1>
           </div>
           <p className="mt-1 text-xs sm:text-sm text-slate-500">
             접속 계정: <span className="font-semibold text-slate-700">{userEmail}</span> | 제보 현황 확인 및 공식 답변 처리
@@ -324,7 +324,7 @@ export default function AdminPage() {
             href="/admin/msds"
             className="inline-flex items-center gap-1.5 rounded-xl border border-slate-300 bg-white px-4 py-2 text-xs font-bold text-slate-700 hover:bg-slate-50 transition"
           >
-            <FileSearch className="h-4 w-4 text-blue-600" />
+            <FileSearch className="h-4 w-4 text-oncobix-500" />
             <span>MSDS 문서 관리</span>
           </Link>
           <button
