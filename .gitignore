@@ -31,6 +31,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# cloudflared
+cloudflared.exe
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
